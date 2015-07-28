@@ -1,0 +1,39 @@
+_repo: Dracula_345
+covers:
+- cover_type: archival
+  image_path: 345/345-h/images/cover.jpg
+  rights: Public domain in the USA.
+  rights_url: http://creativecommons.org/about/pdm
+creator:
+  author:
+    agent_name: Stoker, Bram
+    alias: Stoker, Abraham
+    birthdate: 1847
+    deathdate: 1912
+    gutenberg_agent_id: '190'
+    url: http://www.gutenberg.org/2009/agents/190
+    wikipedia: http://en.wikipedia.org/wiki/Bram_Stoker
+gutenberg_bookshelf:
+- Movie Books
+- Gothic Fiction
+- Horror
+- Mystery Fiction
+gutenberg_issued: '1995-10-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '345'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- '!lcsh:Dracula, Count (Fictitious character) -- Fiction'
+- '!lcsh:Vampires -- Fiction'
+- '!lcsh:Horror tales'
+- '!lcsh:Gothic fiction (Literary genre)'
+- '!lcsh:Transylvania (Romania) -- Fiction'
+- '!lcsh:Whitby (England) -- Fiction'
+- '!lcsh:Epistolary fiction'
+- '!lcc:PR'
+title: Dracula
+url: http://www.gutenberg.org/ebooks/345
