@@ -19,9 +19,9 @@ creator:
     url: http://www.gutenberg.org/2009/agents/190
     wikipedia: http://en.wikipedia.org/wiki/Bram_Stoker
 gutenberg_bookshelf:
-- Mystery Fiction
-- Horror
 - Gothic Fiction
+- Horror
+- Mystery Fiction
 - Movie Books
 gutenberg_issued: '1995-10-01'
 gutenberg_type: Text
@@ -32,13 +32,13 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Epistolary fiction'
-- '!lcsh:Horror tales'
-- '!lcsh:Gothic fiction (Literary genre)'
-- '!lcsh:Transylvania (Romania) -- Fiction'
-- '!lcsh:Dracula, Count (Fictitious character) -- Fiction'
-- '!lcsh:Whitby (England) -- Fiction'
-- '!lcsh:Vampires -- Fiction'
-- '!lcc:PR'
+- '!lcsh: Epistolary fiction'
+- '!lcsh: Transylvania (Romania) -- Fiction'
+- '!lcsh: Gothic fiction (Literary genre)'
+- '!lcsh: Vampires -- Fiction'
+- '!lcsh: Horror tales'
+- '!lcsh: Whitby (England) -- Fiction'
+- '!lcsh: Dracula, Count (Fictitious character) -- Fiction'
+- '!lcc: PR'
 title: Dracula
 url: http://www.gutenberg.org/ebooks/345
