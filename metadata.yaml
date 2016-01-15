@@ -1,10 +1,6 @@
 _repo: Dracula_345
-_version: 0.0.1
+_version: 0.0.2
 covers:
-- cover_type: archival
-  image_path: 345/345-h/images/cover.jpg
-  rights: Public domain in the USA.
-  rights_url: http://creativecommons.org/about/pdm
 - attribution: Steve St. Pierre, 2015
   cover_type: original
   image_path: cover.jpg
