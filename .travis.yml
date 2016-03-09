@@ -21,13 +21,15 @@ script:
 - /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.jpg OEBPS/cover.jpg
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
 # look for first images directory and one found, copy over to ./OEBPS
 - find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
 - mv book.epub Dracula.epub
+- ebook-convert Dracula.epub Dracula.mobi
+- xvfb-run ebook-convert Dracula.epub Dracula.pdf
 branches:
   only:
   - master
@@ -43,10 +45,15 @@ deploy:
   provider: releases
   api_key:
     secure: 3k50/0O3/XRZHSXaVADXbM3VxRUrH4k27AjM1OpFyPP0AHXBpnpFhsZlphkurzDg1x16A3MISFMZCGTi3Wc7ImFrfbNhDwegh5/07Vm0OcX8tfSLOYrDX81VJWQ2t3qpusG+dAqMgpF0YEPpbijwy9rtxSMiFJ9IfVUr3321QfAW0qykEmc5ifolhD2jQS6bJilTSls35oSx5uEt7cM180BIGVkkozEQwbxe2G+fUQjdy85Z2YZ121R0vOv2BXWAyccBF3Kg4KfpPBbWuw35zte7WnWSMRH/P8/yhfZJcnu3B5K5HbZLA8JrOolzYVUvXu+qqAh/j12BzgZx9e/TOYEk/dDpkh6WYlwA0R8pikYKkxAzVsvaVEvCozP4YxLIFB2J5HpGIxJEkH2LRjD5rO7rjVuIGxGebfSCh2l4BLL4/ibe++uxAhjM2og5SSC8UEYG2GjQ9+UiRrk5Iw3rbUW3pGvKMJnkyBsePBzDJ6ewwtMsFkjflpUqCSsenRP9j9gGTLBWAzcB0itIBQ1VYDpCLJZO8dCJxGJbXhMlEcNysYLLmJkfls2sugNnc63SO663X82O48ZXOgmA4JZ7x1glmDB5ltI3hGFE8d27J4fak8yhkn7jlL0rD//4Ue3LZWHPsxgOh38kAPriJtAM4oaPWylqMN+FnKAoER/e3z4=
-  file: Dracula.epub
+  file:
+    - Dracula.epub
+    - Dracula.mobi
+    - Dracula.pdf
   "on":
     repo: GITenberg/Dracula_345
 addons:
   apt:
     packages:
     - xsltproc
+    - xvfb
+    - calibre
